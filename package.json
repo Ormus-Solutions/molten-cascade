@@ -1,18 +1,35 @@
 {
-  "name": "molten-cascade",
+  "name": "@ormus/molten-cascade",
   "version": "0.1.0",
-  "description": "Jev to code to LLM cascade kit",
+  "description": "Jev → code → LLM cascade — Pattern 4 liquid gold",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
   "scripts": {
-    "build": "tsc -p tsconfig.json",
-    "test": "vitest run"
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "example": "tsx src/example.ts"
+  },
+  "peerDependencies": {
+    "ai": "*",
+    "@typesafe-ai/sdk": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0",
+    "vitest": "^2.1.0"
   },
   "license": "MIT",
-  "engines": { "node": ">=20" },
-  "devDependencies": {
-    "typescript": "^5.8.0",
-    "vitest": "^3.0.0"
-  }
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ormus-Solutions/molten-cascade.git"
+  },
+  "keywords": ["jev", "cascade", "routing", "ormus", "liquid-gold"]
 }

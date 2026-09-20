@@ -1,19 +1,48 @@
 # molten-cascade
 
-**Liquid gold for TypeSafe Jev** — Jev → code → LLM → human.
+> System One skims the slag. Code hammers what is sharp. Frontier fire only for the stubborn ore.
 
-Pattern 4 from the free Jev cookbooks: System One triages intent + complexity; deterministic code takes the easy branch; a frontier model takes the hard minority; low confidence always escalates.
+**@ormus/molten-cascade** implements **Jev Pattern 4**: a three-stage pour — **Jev triage → deterministic code → LLM**. Most tickets should never touch the expensive burner.
 
-Siblings: [aurum-gate](https://github.com/Ormus-Solutions/aurum-gate) · [quicksilver-judge](https://github.com/Ormus-Solutions/quicksilver-judge) · [gold-assay](https://github.com/Ormus-Solutions/gold-assay) · [karat-filter](https://github.com/Ormus-Solutions/karat-filter)
+Paraphrased from the cascade ideas in public **TypeSafe / Vercel Jev** materials and the accessible **master-Jev** curriculum: escalate only when confidence and determinism both fail.
 
-```mermaid
-flowchart LR
-  M[Message] --> J[Jev intent+complexity]
-  J -->|low confidence| H[Human]
-  J -->|simple intent| C[Pure code]
-  J -->|hard intent| L[Specialist LLM]
+## Install
+
+```bash
+npm i @ormus/molten-cascade
+```
+
+## Quick pour
+
+```ts
+import { runCascade, mockJevTriage, mockCodeStage, mockLlmStage } from '@ormus/molten-cascade';
+
+await runCascade(
+  { id: '1', intent: 'normalize text', payload: { text: '  Hi ' } },
+  { jev: mockJevTriage, code: mockCodeStage, llm: mockLlmStage },
+);
+```
+
+Swap mocks for real Jev Nouls / AI SDK calls when you wire production.
+
+## Liquid Gold siblings
+
+| Repo | Role |
+|------|------|
+| [aurum-gate](https://github.com/Ormus-Solutions/aurum-gate) | Pattern 2 gates |
+| [quicksilver-judge](https://github.com/Ormus-Solutions/quicksilver-judge) | Raven pre-filter |
+| [gold-assay](https://github.com/Ormus-Solutions/gold-assay) | Vibium assay |
+| [molten-cascade](https://github.com/Ormus-Solutions/molten-cascade) | **You are here** — Pattern 4 |
+| [karat-filter](https://github.com/Ormus-Solutions/karat-filter) | Pattern 5 |
+| [liquid-gold](https://github.com/Ormus-Solutions/liquid-gold) | Index |
+
+## Scripts
+
+```bash
+npm test
+npm run build
 ```
 
 ## License
 
-MIT (c) Ormus Solutions
+MIT © 2026 Ormus Solutions
